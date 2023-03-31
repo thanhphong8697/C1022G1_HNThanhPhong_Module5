@@ -4,7 +4,7 @@ class Customer extends Component {
     render(){
         return (
             <div style="margin-top: 75px;">
-        <table class="table table-striped">
+        <table className="table table-striped">
             <thead>
               <tr>
                 <th scope="col">ID</th>
@@ -32,10 +32,10 @@ class Customer extends Component {
                 <td>26 Tú Mỡ</td>
                 <td>Gold</td>
                 <td>
-                    <a href="" class=" btn btn-primary">Update</a>
+                    <a href="" className=" btn btn-primary">Update</a>
                 </td>
                 <td>
-                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <button type="button" className="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Delete
                       </button>
                 </td>
@@ -51,10 +51,10 @@ class Customer extends Component {
                 <td>26 Tú Mỡ</td>
                 <td>Gold</td>
                 <td>
-                    <a href="" class=" btn btn-primary">Update</a>
+                    <a href="" className=" btn btn-primary">Update</a>
                 </td>
                 <td>
-                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <button type="button" className="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Delete
                       </button>
                 </td>
@@ -70,10 +70,10 @@ class Customer extends Component {
                 <td>26 Tú Mỡ</td>
                 <td>Gold</td>
                 <td>
-                    <a href="" class=" btn btn-primary">Update</a>
+                    <a href="" className=" btn btn-primary">Update</a>
                 </td>
                 <td>
-                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <button type="button" className="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Delete
                       </button>
                 </td>
@@ -89,10 +89,10 @@ class Customer extends Component {
                 <td>26 Tú Mỡ</td>
                 <td>Gold</td>
                 <td>
-                    <a href="" class=" btn btn-primary">Update</a>
+                    <a href="" className=" btn btn-primary">Update</a>
                 </td>
                 <td>
-                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <button type="button" className="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Delete
                       </button>
                 </td>
