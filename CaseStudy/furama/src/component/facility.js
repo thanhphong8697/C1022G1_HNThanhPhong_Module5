@@ -1,9 +1,6 @@
-const { Component } = require("react");
-
-class Facility extends Component {
-    render(){
-        return (
-            <>
+export default function Facility() {
+  return (
+    <>
             <div className="row gx-5 container-fluid" style="margin: 10px 0px;">
     <div className="col-4 align-items-center d-flex justify-content-center">
       <div className="card p-2 border-1" style="width: 25rem;">
@@ -149,6 +146,3 @@ class Facility extends Component {
   </>
         );
     }
-}
-
-export default Facility;

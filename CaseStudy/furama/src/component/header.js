@@ -1,8 +1,6 @@
-const { Component } = require("react");
-
-class Header extends Component {
-    render(){
-        return (
+export default function Header() {
+  return (
+    <>
             <nav
       className="navbar navbar-expand-lg navbar-light fixed-top"
       style="height: 75px; background-color: #085f56"
@@ -37,8 +35,6 @@ class Header extends Component {
         </div>
       </div>
     </nav>
+    </>
         );
     }
-}
-
-export default Header;

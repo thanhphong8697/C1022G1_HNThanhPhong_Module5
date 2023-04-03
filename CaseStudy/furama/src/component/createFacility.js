@@ -1,9 +1,7 @@
-const { Component } = require("react");
-
-class CreateFacility extends Component {
-    render(){
-        return (
-            <div className="d-flex justify-content-center mb-4" style="margin-top: 85px;">
+export default function CreateFacility() {
+  return (
+    <>
+        <div className="d-flex justify-content-center mb-4" style="margin-top: 85px;">
         <form style="width: 50%;">
             <div>
               <legend>Create facility</legend>
@@ -58,8 +56,6 @@ class CreateFacility extends Component {
             </div>
           </form>
     </div>
+    </>
         );
     }
-}
-
-export default CreateFacility;

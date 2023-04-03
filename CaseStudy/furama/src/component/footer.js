@@ -1,9 +1,6 @@
-const { Component } = require("react");
-
-class Footer extends Component {
-    render(){
-        return(
-            <>
+export default function Footer() {
+  return (
+    <>
     <footer className="footer-04" style="background-color: #085f56">
       <div className="container">
         <div className="row">
@@ -88,6 +85,3 @@ class Footer extends Component {
             </>
         );
     }
-}
-
-export default Footer;

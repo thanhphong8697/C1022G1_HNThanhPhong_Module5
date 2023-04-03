@@ -1,10 +1,8 @@
-const { Component } = require("react");
-
-class Customer extends Component {
-    render(){
+export default function Customer() {
         return (
+          <>
             <div style="margin-top: 75px;">
-        <table className="table table-striped">
+            <table className="table table-striped">
             <thead>
               <tr>
                 <th scope="col">ID</th>
@@ -100,8 +98,6 @@ class Customer extends Component {
             </tbody>
           </table>
     </div>
+    </>
         );
     }
-}
-
-export default Customer;

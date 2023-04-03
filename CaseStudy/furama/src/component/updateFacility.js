@@ -1,8 +1,6 @@
-const { Component } = require("react");
-
-class UpdateFacility extends Component {
-    render(){
-        return (
+export default function UpdateFacility() {
+  return (
+    <>
             <div className="d-flex justify-content-center mb-4" style="margin-top: 85px;">
         <form style="width: 50%;">
             <div>
@@ -49,8 +47,6 @@ class UpdateFacility extends Component {
             </div>
           </form>
     </div>
+    </>
         );
     }
-}
-
-export default UpdateFacility;
