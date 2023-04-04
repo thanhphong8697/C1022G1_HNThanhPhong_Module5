@@ -1,7 +1,11 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import { Bars } from "react-loader-spinner";
+import { ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 export default function MedicalForm() {
+  let navigate = useNavigate();
   return (
     <>
       <Formik
@@ -40,6 +44,8 @@ export default function MedicalForm() {
           setTimeout(() => {
             console.log(values);
             setSubmitting(false);
+            toast("Success!!!");
+            navigate('/medical');
           }, 500);
         }}
       >
@@ -132,7 +138,7 @@ export default function MedicalForm() {
               <Field name="informationOne" component='textarea' className="form-control" placeholder="Disabled input"/>
             </div>
             <div className="mb-3">
-              <h4>Trong vòng 14 ngày qua, Anh /Chị có đến quốc gia /vùng lãnh thổ nào (Có thể đi qua nhiều quốc gia)</h4>
+              <h4>Trong vòng 14 ngày qua, Anh /Chị có thấy xuất hiện dấu hiệu nào sau đây không?</h4>
               <div className="form-check">
                 <input name="informationTwo" value="Sốt" className="form-check-input" type="checkbox" id="cb-2"/>
                 <label className="form-check-label" htmlFor="cb-2">
@@ -169,10 +175,6 @@ export default function MedicalForm() {
                   Mệt mỏi
                 </label>
               </div>
-            </div>
-            <div className="mb-3">
-              <h4>Trong vòng 14 ngày qua, Anh /Chị có đến quốc gia /vùng lãnh thổ nào (Có thể đi qua nhiều quốc gia)</h4>
-              <Field name="informationOne" component='textarea' className="form-control" placeholder="Disabled input"/>
             </div>
             <div className="mb-3">
               <h4>Trong vòng 14 ngày qua, Anh /Chị có tiếp xúc với ?</h4>

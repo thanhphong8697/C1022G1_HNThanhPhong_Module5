@@ -1,7 +1,11 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import { Bars } from "react-loader-spinner";
+import { ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 export default function ContractForm() {
+  let navigate = useNavigate();
   return (
     <>
       <Formik
@@ -15,14 +19,15 @@ export default function ContractForm() {
           name: Yup.string().required("Required."),
           email: Yup.string().required("Required.").email("abc@gmail.com"),
           phone: Yup.string()
-            .required("Required.")
-            .matches('(84|0[3|5|7|8|9])+([0-9]{8})\b', 'Please enter correct phone format'),
+            .required("Required."),
           message: Yup.string().required("Required."),
         })}
         onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
             console.log(values);
             setSubmitting(false);
+            toast("Success!!!");
+            navigate('/contact');
           }, 500);
         }}
       >

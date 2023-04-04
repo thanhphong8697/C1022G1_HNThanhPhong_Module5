@@ -1,24 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import ContractForm from './ContactForm';
+import MedicalForm from './medicalForm';
+import { NavLink, Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavLink to='/contact'>Contact</NavLink>
+      <NavLink to='/medical' className='ms-5'>Medical</NavLink>
+      <Routes>
+        <Route path='/contact' element={<ContractForm />} />
+        <Route path='/medical' element={<MedicalForm />} />
+      </Routes>
+      <ToastContainer />
+    </>
   );
 }
 
