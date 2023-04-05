@@ -5,7 +5,7 @@ import { Bars } from "react-loader-spinner";
 import { ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export default function BookCreate() {
+export default function Bookupdate() {
     return(
         <>
         <Formik
@@ -17,7 +17,7 @@ export default function BookCreate() {
         onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
             const create = async () => {
-                await bookService.save(values)
+                await bookService.update(values)
                 setSubmitting(false);
                 toast("Success!!!");
             };
