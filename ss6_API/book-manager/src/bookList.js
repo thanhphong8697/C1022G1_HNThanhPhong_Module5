@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import * as bookService from './bookService';
 import { NavLink} from 'react-router-dom';
+import { toast } from 'react-toastify';
 // import { update } from './bookService'
 
 export default function BookList(){
@@ -14,14 +15,15 @@ export default function BookList(){
         fetchApi();
     }, []);
 
-    // const handleUpdate = (id, book) => {
-    //     setBooks(book);
-    // };
-
     const handleDelete = async(id) => {
-        let result = await bookService.deleteBook(id);
-        setBooks(result);
-    }
+        try{
+            await bookService.deleteBook(id);
+            toast("Success!!!");
+            
+        }catch{
+            toast("Fail!!!");
+        }
+    };
 
     return (
         <>
