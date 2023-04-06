@@ -31,3 +31,11 @@ export const deleteBook = async (id) => {
         console.log(error);
     }
 };
+
+export const findById = async (id) => {
+    try{
+        const book = await axios.get("https://my-json-server.typicode.com/codegym-vn/mock-api-books/books")
+    } catch(error){
+        console.log(error);
+    }
+}

@@ -1,12 +1,10 @@
 import { useEffect, useState } from 'react';
-import { Field, Form, Formik } from "formik";
-import * as bookService from '../src/bookService;';
-import { NavLink, useNavigate } from 'react-router-dom';
-import { update } from './bookService';
+import * as bookService from './bookService';
+import { NavLink} from 'react-router-dom';
+// import { update } from './bookService'
 
 export default function BookList(){
     const [books, setBooks] = useState([]);
-    const navigate = useNavigate();
     
     useEffect(() => {
         const fetchApi = async () => {
@@ -16,9 +14,9 @@ export default function BookList(){
         fetchApi();
     }, []);
 
-    const handleUpdate = (id, book) => {
-        setBooks(book);
-    };
+    // const handleUpdate = (id, book) => {
+    //     setBooks(book);
+    // };
 
     const handleDelete = async(id) => {
         let result = await bookService.deleteBook(id);
@@ -48,7 +46,7 @@ export default function BookList(){
                         <td>{book.title}</td>
                         <td>{book.quantity}</td>
                         <td>
-                            <a className=" btn btn-primary" onClick={() => handleUpdate(book.id)}>Update</a>
+                            <NavLink className=" btn btn-primary" to={`update/${book.id}`}>Update</NavLink>
                         </td>
                         <td>
                             <button onClick={() => handleDelete(book.id)} type="button" className="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">

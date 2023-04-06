@@ -1,14 +1,23 @@
-import * as bookService from '../src/bookService;';
+// import * as bookService from '../src/bookService;';
 import { useEffect, useState } from 'react';
-import { Field, Form, Formik } from "formik";
-import { Bars } from "react-loader-spinner";
-import { ToastContainer, toast} from 'react-toastify';
+// import { Field, Form, Formik } from "formik";
+// import { Bars } from "react-loader-spinner";
+// import { toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate, useParams } from 'react-router-dom'
 
-export default function BookCreate() {
+export default function BookUpdate() {
+  const navigate = useNavigate();
+  const param = useParams();
+  const [book, setBook] = useState();
+  useEffect(() => {
+    async function bookDetail() {
+      const detail=  await b
+    }
+  })
     return(
         <>
-        <Formik
+        {/* <Formik
         initialValues={{
           title: "",
           quantity: "",
@@ -17,7 +26,7 @@ export default function BookCreate() {
         onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
             const create = async () => {
-                await bookService.save(values)
+                await bookService.update(values)
                 setSubmitting(false);
                 toast("Success!!!");
             };
@@ -27,7 +36,7 @@ export default function BookCreate() {
       >
         {({ isSubmitting }) => (
           <Form>
-            <h1>Creat a new book</h1>
+            <h1>Update</h1>
             <div className="mb-3">
               <label htmlFor="title" className="form-label">
                 Title
@@ -56,7 +65,7 @@ export default function BookCreate() {
             }
           </Form>
         )};
-      </Formik>
+      </Formik> */}
         </>
     )
 }
