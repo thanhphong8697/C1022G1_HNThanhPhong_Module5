@@ -8,7 +8,7 @@
       phone: "079243338",
       email: "thanhphong861997@gmail.com",
       address: "26 Tú Mỡ",
-      customerType: "Diamond"
+      customerType: 1
     },
     {
       id: 2,
@@ -19,7 +19,7 @@
       phone: "079243338",
       email: "thanhphong861997@gmail.com",
       address: "26 Tú Mỡ",
-      customerType: "Diamond"
+      customerType: 1
     },
     {
       id: 3,
@@ -30,7 +30,7 @@
       phone: "079243338",
       email: "thanhphong861997@gmail.com",
       address: "26 Tú Mỡ",
-      customerType: "Diamond"
+      customerType: 1
     },
     {
       id: 4,
@@ -41,6 +41,7 @@
       phone: "079243338",
       email: "thanhphong861997@gmail.com",
       address: "26 Tú Mỡ",
-      customerType: "Diamond"
+      customerType: 1
     }
   ]
+  export default customerMap;

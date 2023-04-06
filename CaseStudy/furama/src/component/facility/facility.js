@@ -1,6 +1,7 @@
 
-const FacilityMap =[
+const facilityMap =[
       {
+        id: 1,
         img: "https://furamavietnam.com/wp-content/uploads/2018/03/%5E224942630D3A5A787C2989A9F5AF4A3E34E6A8CAE8D94FA3D4%5Epimgpsh_fullsize_distr-1047x563.jpg",
         name: "OCEAN SUITE",
         size: "Room size: 85.8 m2",
@@ -17,6 +18,7 @@ const FacilityMap =[
         
       },
       {
+        id: 2,
         img: "https://furamavietnam.com/wp-content/uploads/2018/03/%5E224942630D3A5A787C2989A9F5AF4A3E34E6A8CAE8D94FA3D4%5Epimgpsh_fullsize_distr-1047x563.jpg",
         name: "OCEAN SUITE",
         size: "Room size: 85.8 m2",
@@ -33,6 +35,7 @@ const FacilityMap =[
         
       },
       {
+        id: 3,
         img: "https://furamavietnam.com/wp-content/uploads/2018/03/%5E224942630D3A5A787C2989A9F5AF4A3E34E6A8CAE8D94FA3D4%5Epimgpsh_fullsize_distr-1047x563.jpg",
         name: "OCEAN SUITE",
         size: "Room size: 85.8 m2",
@@ -49,6 +52,7 @@ const FacilityMap =[
         
       },
       {
+        id: 4,
         img: "https://furamavietnam.com/wp-content/uploads/2018/03/%5E224942630D3A5A787C2989A9F5AF4A3E34E6A8CAE8D94FA3D4%5Epimgpsh_fullsize_distr-1047x563.jpg",
         name: "OCEAN SUITE",
         size: "Room size: 85.8 m2",
@@ -65,6 +69,7 @@ const FacilityMap =[
         
       },
       {
+        id: 5,
         img: "https://furamavietnam.com/wp-content/uploads/2018/03/%5E224942630D3A5A787C2989A9F5AF4A3E34E6A8CAE8D94FA3D4%5Epimgpsh_fullsize_distr-1047x563.jpg",
         name: "OCEAN SUITE",
         size: "Room size: 85.8 m2",
@@ -81,6 +86,7 @@ const FacilityMap =[
         
       },
       {
+        id: 6,
         img: "https://furamavietnam.com/wp-content/uploads/2018/03/%5E224942630D3A5A787C2989A9F5AF4A3E34E6A8CAE8D94FA3D4%5Epimgpsh_fullsize_distr-1047x563.jpg",
         name: "OCEAN SUITE",
         size: "Room size: 85.8 m2",
@@ -97,4 +103,4 @@ const FacilityMap =[
         
       }
     ];
-    export default FacilityMap
+    export default facilityMap

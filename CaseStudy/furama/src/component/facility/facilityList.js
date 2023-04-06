@@ -1,4 +1,4 @@
-import { FacilityMap } from "./facility"
+import { facilityMap } from "./facility"
 export default function FacilityList() {
     return (
       <>
@@ -9,7 +9,7 @@ export default function FacilityList() {
         </div>
       </div>
    <div className="row gx-5 container-fluid" style={{margin: '10px 0px'}}>
-    {FacilityMap.map((facility, index) => {
+    {facilityMap.map((facility, index) => {
       return(
         <div className="col-4 align-items-center d-flex justify-content-center" key={index}>
         <div className="card p-2 border-1 shadow mt-5" style={{width: '25rem'}}>

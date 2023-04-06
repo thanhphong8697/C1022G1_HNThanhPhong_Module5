@@ -1,8 +1,9 @@
-import { customerMap } from "./customer"
+import customerMap from "./customer"
+import customerType from "./customerType";
 export default function CustomerList() {
     return (
       <>
-        <div style="margin-top: 75px;">
+        <div style={{marginTop: '75px'}}>
         <table className="table table-striped">
         <thead>
           <tr>
@@ -20,8 +21,7 @@ export default function CustomerList() {
           </tr>
         </thead>
         <tbody>
-          {customerMap.map((customer) => {
-            return (
+          {customerMap.map((customer) => (
               <tr key={customer.id}>
               <th>{customer.id}</th>
               <td>{customer.name}</td>
@@ -31,7 +31,9 @@ export default function CustomerList() {
               <td>{customer.phone}</td>
               <td>{customer.email}</td>
               <td>{customer.address}</td>
-              <td>{customer.customerType}</td>
+              <td>{customerType.filter(customerId => (
+                customerId.id === customer.customerType
+              ))[0].type}</td>
               <td>
                   <a href="" className=" btn btn-primary">Update</a>
               </td>
@@ -42,7 +44,7 @@ export default function CustomerList() {
               </td>
             </tr>
             )
-          })}
+          )}
         </tbody>
       </table>
 </div>
