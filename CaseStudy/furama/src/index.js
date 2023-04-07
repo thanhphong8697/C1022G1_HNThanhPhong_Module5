@@ -3,14 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import FacilityPage from './component/facilityPage';
-import CustomerList from './component/customer/customerList';
+import FacilityPage from './component/facility/facilityPage';
+// import CustomerList from './component/customer/customerList';
+// import CreateCustomer from './component/customer/createCustomer';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-    <CustomerList/>
+    {/* <CreateCustomer/> */}
+    {/* <CustomerList/> */}
+    {<FacilityPage/>}
   </React.StrictMode>
 );
 

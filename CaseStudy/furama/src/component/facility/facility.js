@@ -1,5 +1,5 @@
 
-const facilityMap =[
+export const facilityMap =[
       {
         id: 1,
         img: "https://furamavietnam.com/wp-content/uploads/2018/03/%5E224942630D3A5A787C2989A9F5AF4A3E34E6A8CAE8D94FA3D4%5Epimgpsh_fullsize_distr-1047x563.jpg",
@@ -103,4 +103,3 @@ const facilityMap =[
         
       }
     ];
-    export default facilityMap

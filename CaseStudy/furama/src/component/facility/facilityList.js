@@ -1,10 +1,10 @@
-import { facilityMap } from "./facility"
+import { facilityMap } from "../facility/facility"
 export default function FacilityList() {
     return (
       <>
       <div className="container-fluid px-0 mt-5 position-relative" style={{paddingTop: '27px'}}>
       <img src=".\304477226_783255306109726_3396164101345234771_n.jpg" style={{height: '400px', width: '100%'}} alt="" />
-      <div className="position-absolute facility">
+      <div className="position-absolute">
           FACILITYS
         </div>
       </div>

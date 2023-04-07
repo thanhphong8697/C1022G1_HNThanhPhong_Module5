@@ -1,6 +1,6 @@
 import Header from '../header';
 import Footer from '../footer';
-import Facility from '../facility';
+import FacilityList from '../facility/facilityList';
 export default function FacilityPage() {
     return (
             <>
