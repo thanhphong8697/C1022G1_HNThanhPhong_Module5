@@ -1,11 +1,11 @@
 import request from '../http';
 
 const allUser = () => {
-    return request.get();
+    return request.get('/users');
 };
 
 const deleteUser = (id) => {
-    return request.post(id);
+    return request.delete(`/users/${id}`);
 };
 
 const userService = {
