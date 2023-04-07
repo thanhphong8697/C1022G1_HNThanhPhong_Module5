@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import * as bookService from '../service/bookService';
 import 'bootstrap/dist/css/bootstrap.css'
 import { toast } from 'react-toastify';
-// import { Toast } from 'react-toastify';
 
 export default function BooksList() {
     const [books, setBooks] = useState([]);
@@ -16,7 +15,7 @@ export default function BooksList() {
         const result = await bookService.findAll();
         setBooks(result);
     }
-    
+
     const handleDelete = async(id) => {
         try {
             await bookService.deleteBook(id);
@@ -32,7 +31,7 @@ export default function BooksList() {
     return (
         <>
             <h1>Library</h1>
-            <NavLink to='/create'>create new book</NavLink>
+            <NavLink to='/create' className="btn btn-primary">create new book</NavLink>
             <table className="table table-striped table-hover">
                 <thead>
                 <tr>
