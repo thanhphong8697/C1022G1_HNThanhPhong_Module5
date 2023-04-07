@@ -19,7 +19,6 @@ export default function BookList(){
         try{
             await bookService.deleteBook(id);
             toast("Success!!!");
-            
         }catch{
             toast("Fail!!!");
         }
