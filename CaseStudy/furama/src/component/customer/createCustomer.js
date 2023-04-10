@@ -2,7 +2,7 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import customerType from "./customerType";
+import {customerType} from "./customerType";
 import "bootstrap/dist/css/bootstrap.css";
 // import { useNavigate } from "react-router-dom";
 export default function CreateCustomer() {
@@ -41,10 +41,9 @@ export default function CreateCustomer() {
       >
         <div
           className="d-flex justify-content-center mb-4 "
-          style={{ marginTop: "85px"}}
-          
+          style={{ marginTop: "85px", backgroundImage: "..furama-img.png"}}
         >
-          <Form className="bg-light p-3" style={{ width: "50%" }}>
+          <Form className="bg-light p-3 shadow" style={{ width: "50%" }}>
             <div>
               <legend className="fw-bolder text-center">Thêm Khách Hàng</legend>
               <div className="row mb-4 ">

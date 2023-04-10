@@ -223,10 +223,10 @@ export default function CreateFacility() {
                     id={aminity.idAminities}
                     name="aminitiesId"
                     value={aminity.idAminities.toString()}
-                    className="col-2"
+                    className="col-5 mt-2"
                   />
-                  <label htmlFor={aminity.idAminities} className="col-10 form-label fw-bolder">
-                    {aminity.name}
+                  <label htmlFor={aminity.idAminities} className="col-7 form-label fw-bolder">
+                    {aminity.nameAminities}
                   </label>
                   </div>
                 ))}

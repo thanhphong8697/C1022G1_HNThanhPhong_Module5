@@ -1,265 +1,222 @@
+import { Form, Formik, Field, ErrorMessage } from "formik";
+// import { contractMap } from "./contract";
+import { customerMap } from "../customer/customer";
+import { facilityMap } from "../facility/facility";
+import { toast } from "react-toastify";
+
 export default function CreateContract() {
-    return (
-        <>
-        <div className="d-flex justify-content-center mb-4" style="margin-top: 60px">
-      <form style="width: 50%">
-        <h1 className="text-center mt-5">New Contract</h1>
-        <h5>Customer information make a contract</h5>
-        <div>
-          <div className="row mb-4">
-            <div className="col-4 d-flex align-items-center">
-              <label htmlFor="disabledTextInput" className="form-label">Name</label>
-            </div>
-            <div className="col-8">
-              <input
-                type="text"
-                id="disabledTextInput"
-                className="form-control"
-                placeholder="Enter name of customer"
-              />
-            </div>
+  return (
+    <>
+      <Formik
+        initialValues={{
+          customerId: customerMap[0]?.id,
+          facilityId: facilityMap[0]?.id,
+          contractCode: "",
+          startDate: "",
+          completionDate: "",
+          advancePayment: "",
+          remainingPayment: "",
+        }}
+        onSubmit={(value, { setSubmitting }) => {
+          try {
+            toast("Thêm mới thành công");
+            setSubmitting(false);
+          } catch (error) {
+            toast("Thêm mới thất bại");
+            setSubmitting(false);
+          }
+        }}
+      >
+        {({ isSubmitting }) => (
+          <div
+            className="d-flex justify-content-center mb-4 "
+            style={{ marginTop: "85px", backgroundImage: "..furama-img.png" }}
+          >
+            <Form className="bg-light p-3 shadow" style={{ width: "50%" }}>
+              <legend className="fw-bolder text-center">Thêm hợp đồng</legend>
+              <div className="row mb-4 ">
+                <div className="col-2 d-flex align-items-center">
+                  <label
+                    htmlFor="contractCode"
+                    className="form-label fw-bolder"
+                  >
+                    Số hợp đông
+                  </label>
+                </div>
+                <div className="col-10">
+                  <Field
+                    type="text"
+                    id="contractCode"
+                    className="form-control"
+                    placeholder="Enter name of customer"
+                    name="contractCode"
+                  />
+                  <ErrorMessage
+                    name="contractCode"
+                    component="span"
+                    classNameName="form-err"
+                  />
+                </div>
+              </div>
+              <div className="row mb-4 ">
+                <div className="col-2 d-flex align-items-center">
+                  <label htmlFor="customerId" className="form-label fw-bolder">
+                    Khách hàng
+                  </label>
+                </div>
+                <div className="col-10">
+                  <Field
+                    as="select"
+                    id="customerId"
+                    className="form-control"
+                    placeholder="Enter name of customer"
+                    name="customerId"
+                  >
+                    {customerMap.map((customer) => (
+                      <option key={customer.id} value={customer.id.toString()}>
+                        {customer.name}
+                      </option>
+                    ))}
+                  </Field>
+                  <ErrorMessage
+                    name="customerId"
+                    component="span"
+                    classNameName="form-err"
+                  />
+                </div>
+              </div>
+              <div className="row mb-4 ">
+                <div className="col-2 d-flex align-items-center">
+                  <label htmlFor="facilityId" className="form-label fw-bolder">
+                    Dịch vụ
+                  </label>
+                </div>
+                <div className="col-10">
+                  <Field
+                    as="select"
+                    id="facilityId"
+                    className="form-control"
+                    placeholder="Enter name of customer"
+                    name="facilityId"
+                  >
+                    {facilityMap.map((facility) => (
+                      <option key={facility.id} value={facility.id.toString()}>
+                        {facility.name}
+                      </option>
+                    ))}
+                  </Field>
+                  <ErrorMessage
+                    name="facilityId"
+                    component="span"
+                    classNameName="form-err"
+                  />
+                </div>
+              </div>
+              <div className="row mb-4 ">
+                <div className="col-2 d-flex align-items-center">
+                  <label htmlFor="startDate" className="form-label fw-bolder">
+                    Ngày bắt đầu
+                  </label>
+                </div>
+                <div className="col-10">
+                  <Field
+                    type="date"
+                    id="startDate"
+                    className="form-control"
+                    placeholder="Enter name of customer"
+                    name="startDate"
+                  />
+                  <ErrorMessage
+                    name="startDate"
+                    component="span"
+                    classNameName="form-err"
+                  />
+                </div>
+              </div>
+              <div className="row mb-4 ">
+                <div className="col-2 d-flex align-items-center">
+                  <label
+                    htmlFor="completionDate"
+                    className="form-label fw-bolder"
+                  >
+                    Ngày kết thúc
+                  </label>
+                </div>
+                <div className="col-10">
+                  <Field
+                    type="date"
+                    id="completionDate"
+                    className="form-control"
+                    placeholder="Enter name of customer"
+                    name="completionDate"
+                  />
+                  <ErrorMessage
+                    name="completionDate"
+                    component="span"
+                    classNameName="form-err"
+                  />
+                </div>
+              </div>
+              <div className="row mb-4 ">
+                <div className="col-2 d-flex align-items-center">
+                  <label
+                    htmlFor="advancePayment"
+                    className="form-label fw-bolder"
+                  >
+                    Số tiền cọc trước
+                  </label>
+                </div>
+                <div className="col-10">
+                  <Field
+                    type="text"
+                    id="advancePayment"
+                    className="form-control"
+                    placeholder="Enter name of customer"
+                    name="advancePayment"
+                  />
+                  <ErrorMessage
+                    name="advancePayment"
+                    component="span"
+                    classNameName="form-err"
+                  />
+                </div>
+              </div>
+              <div className="row mb-4 ">
+                <div className="col-2 d-flex align-items-center">
+                  <label
+                    htmlFor="remainingPayment"
+                    className="form-label fw-bolder"
+                  >
+                    Tổng số tiền thanh toán
+                  </label>
+                </div>
+                <div className="col-10">
+                  <Field
+                    type="text"
+                    id="remainingPayment"
+                    className="form-control"
+                    placeholder="Enter name of customer"
+                    name="remainingPayment"
+                  />
+                  <ErrorMessage
+                    name="remainingPayment"
+                    component="span"
+                    classNameName="form-err"
+                  />
+                </div>
+                <div className="d-flex justify-content-center mt-3">
+                  <a href="" className="btn btn-secondary me-3">
+                    Back
+                  </a>
+                  <button type="submit" className="btn btn-primary">
+                    Create
+                  </button>
+                </div>
+              </div>
+            </Form>
           </div>
-          <div className="row mb-4">
-            <div className="col-4 d-flex align-items-center">
-              <label htmlFor="disabledTextInput" className="form-label"
-                >Date of birth</label>
-            </div>
-            <div className="col-8">
-              <input
-                type="text"
-                id="disabledTextInput"
-                className="form-control"
-                placeholder="Enter date of birth"
-              />
-            </div>
-          </div>
-          <div className="row mb-4">
-            <div className="col-4 d-flex align-items-center">
-              <label htmlFor="disabledTextInput" className="form-label">Gender</label>
-            </div>
-            <div className="col-8">
-              <input
-                type="text"
-                id="disabledTextInput"
-                className="form-control"
-                placeholder="Enter gender of customer"
-              />
-            </div>
-          </div>
-          <div className="row mb-4">
-            <div className="col-4 d-flex align-items-center">
-              <label htmlFor="disabledTextInput" className="form-label">Identity</label>
-            </div>
-            <div className="col-8">
-              <input
-                type="text"
-                id="disabledTextInput"
-                className="form-control"
-                placeholder="Enter identity of customer"
-              />
-            </div>
-          </div>
-          <div className="row mb-4">
-            <div className="col-4 d-flex align-items-center">
-              <label htmlFor="disabledTextInput" className="form-label">Phone</label>
-            </div>
-            <div className="col-8">
-              <input
-                type="text"
-                id="disabledTextInput"
-                className="form-control"
-                placeholder="Enter phone of customer"
-              />
-            </div>
-          </div>
-          <div className="row mb-4">
-            <div className="col-4 d-flex align-items-center">
-              <label htmlFor="disabledTextInput" className="form-label">Email</label>
-            </div>
-            <div className="col-8">
-              <input
-                type="text"
-                id="disabledTextInput"
-                className="form-control"
-                placeholder="Enter email of customer"
-              />
-            </div>
-          </div>
-          <div className="row mb-4">
-            <div className="col-4 d-flex align-items-center">
-              <label htmlFor="disabledTextInput" className="form-label">Address</label>
-            </div>
-            <div className="col-8">
-              <input
-                type="text"
-                id="disabledTextInput"
-                className="form-control"
-                placeholder="Enter address of customer"
-              />
-            </div>
-          </div>
-          <div className="row mb-4">
-            <div className="col-4 d-flex align-items-center">
-              <label htmlFor="disabledSelect" className="form-label"
-                >Customer type</label>
-            </div>
-            <div className="col-8">
-              <select id="disabledSelect" className="form-select">
-                <option>Diamond</option>
-                <option>Platinium</option>
-                <option>Gold</option>
-                <option>Silver</option>
-                <option>Member</option>
-              </select>
-            </div>
-          </div>
-          <h5>Room information</h5>
-          <div className="row mb-4">
-            <div className="col-4 d-flex align-items-center">
-              <label htmlFor="disabledTextInput" className="form-label"
-                >Room name</label>
-            </div>
-            <div className="col-8">
-              <input
-                type="text"
-                id="disabledTextInput"
-                className="form-control"
-                placeholder="Enter name of room"
-              />
-            </div>
-          </div>
-          <div className="row mb-4">
-            <div className="col-4 d-flex align-items-center">
-              <label htmlFor="disabledTextInput" className="form-label"
-                >Room size</label>
-            </div>
-            <div className="col-8">
-              <input
-                type="text"
-                id="disabledTextInput"
-                className="form-control"
-                placeholder="Enter size of room"
-              />
-            </div>
-          </div>
-          <div className="row mb-4">
-            <div className="col-4 d-flex align-items-center">
-              <label htmlFor="disabledTextInput" className="form-label"
-                >Room image</label>
-            </div>
-            <div className="col-8">
-              <input
-                type="text"
-                id="disabledTextInput"
-                className="form-control"
-                placeholder="Enter image of room"
-              />
-            </div>
-          </div>
-          <div className="row mb-4">
-            <div className="col-4 d-flex align-items-center">
-              <label htmlFor="disabledTextInput" className="form-label"
-                >Room price</label>
-            </div>
-            <div className="col-8">
-              <input
-                type="text"
-                id="disabledTextInput"
-                className="form-control"
-                placeholder="Enter price of room"
-              />
-            </div>
-          </div>
-          <div className="row mb-4">
-            <div className="col-4 d-flex align-items-center">
-              <label htmlFor="disabledSelect" className="form-label">Room type</label>
-            </div>
-            <div className="col-8">
-              <select id="disabledSelect" className="form-select">
-                <option>Room</option>
-                <option>Villa</option>
-                <option>House</option>
-              </select>
-            </div>
-          </div>
-          <h5>Contract information</h5>
-          <div className="row mb-4">
-            <div className="col-4 d-flex align-items-center">
-              <label htmlFor="disabledTextInput" className="form-label"
-                >Contract code</label>
-            </div>
-            <div className="col-8">
-              <input
-                type="text"
-                id="disabledTextInput"
-                className="form-control"
-                placeholder="Enter Contract code"
-              />
-            </div>
-          </div>
-          <div className="row mb-4">
-            <div className="col-4 d-flex align-items-center">
-              <label htmlFor="disabledTextInput" className="form-label"
-                >Start date</label>
-            </div>
-            <div className="col-8">
-              <input
-                type="text"
-                id="disabledTextInput"
-                className="form-control"
-                placeholder="Enter Start date"
-              />
-            </div>
-          </div>
-          <div className="row mb-4">
-            <div className="col-4 d-flex align-items-center">
-              <label htmlFor="disabledTextInput" className="form-label"
-                >Completion date</label>
-            </div>
-            <div className="col-8">
-              <input
-                type="text"
-                id="disabledTextInput"
-                className="form-control"
-                placeholder="Enter Completion date"
-              />
-            </div>
-          </div>
-          <div className="row mb-4">
-            <div className="col-4 d-flex align-items-center">
-              <label htmlFor="disabledTextInput" className="form-label"
-                >Advance payment</label>
-            </div>
-            <div className="col-8">
-              <input
-                type="text"
-                id="disabledTextInput"
-                className="form-control"
-                placeholder="Enter Advance payment"
-              />
-            </div>
-          </div>
-          <div className="row mb-4">
-            <div className="col-4 d-flex align-items-center">
-              <label htmlFor="disabledTextInput" className="form-label"
-                >Total remaining payment</label>
-            </div>
-            <div className="col-8">
-              <input
-                type="text"
-                id="disabledTextInput"
-                className="form-control"
-                placeholder="Enter Total remaining payment"
-              />
-            </div>
-          </div>
-          <div className="d-flex justify-content-center">
-            <a href="" className="btn btn-secondary me-3">Back</a>
-            <button type="submit" className="btn btn-primary">Create</button>
-          </div>
-        </div>
-      </form>
-    </div>
-        </>
-    );
+        )}
+      </Formik>
+    </>
+  );
 }

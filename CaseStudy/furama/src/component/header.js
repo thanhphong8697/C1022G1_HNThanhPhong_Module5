@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 export default function Header() {
   return (
     <>
@@ -6,11 +7,10 @@ export default function Header() {
         style={{height: "75px", backgroundColor: "#085f56"}}
       >
         <div className="container-fluid">
-          <a className="navbar-brand" style={{margin: "0px 40px"}} href="#">
+          <a className="navbar-brand" style={{margin: "0px 40px"}}>
             <img
               src="https://phuongviethcm.com/wp-content/uploads/2019/07/FURAMA.png"
               style={{width: "75px"}}
-              alt=""
             />
           </a>
           <button
@@ -26,54 +26,40 @@ export default function Header() {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
-              <a
+              <NavLink
+                to="/"
                 className="nav-link active me-4"
                 aria-current="page"
-                href="#"
                 style={{color: "white"}}
               >
-                THE RESORT
-              </a>
-              <a
+                HOME
+              </NavLink>
+              <NavLink
+                to="/facility"
                 className="nav-link active me-4"
                 aria-current="page"
-                href="#"
                 style={{color: "white"}}
               >
-                ROOMS & SUITES
-              </a>
-              <a
+                FACILITY
+              </NavLink>
+              <NavLink
+                to="/customer"
                 className="nav-link active me-4"
                 aria-current="page"
-                href="#"
                 style={{color: "white"}}
               >
-                CULINARY
-              </a>
-              <a
+                CUSTOMER
+              </NavLink>
+              <NavLink
+                to="/contract"
                 className="nav-link active me-4"
                 aria-current="page"
-                href="#"
                 style={{color: "white"}}
               >
-                MEETING & EVENTS
-              </a>
-              <a
-                className="nav-link active me-4"
-                aria-current="page"
-                href="#"
-                style={{color: "white"}}
-              >
-                SPA & FITNESS
-              </a>
-              <a
-                className="nav-link active me-4"
-                aria-current="page"
-                href="#"
-                style={{color: "white"}}
-              >
-                SPECIAL OFFER
-              </a>
+                CONTRACT
+              </NavLink>
+              
+            
             </div>
           </div>
         </div>

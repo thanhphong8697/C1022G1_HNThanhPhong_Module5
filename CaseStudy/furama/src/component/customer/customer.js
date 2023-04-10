@@ -1,5 +1,5 @@
 
-    const customerMap = [{
+export const customerMap = [{
       id: 1,
       name: "Hà Nguyễn Thanh Phong",
       dateOfBirth: "08/06/1997",
@@ -44,4 +44,4 @@
       customerType: 1
     }
   ]
-  export default customerMap;
+   

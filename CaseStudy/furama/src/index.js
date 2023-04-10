@@ -1,22 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-// import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import FacilityPage from './component/facility/facilityPage';
-// import CustomerList from './component/customer/customerList';
-// import CreateCustomer from './component/customer/createCustomer';
-import CreateFacility from './component/facility/createFacility';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
-    {/* <CreateCustomer/> */}
-    {/* <CustomerList/> */}
-    {/* {<FacilityPage/>} */}
-    <CreateFacility/>
+    <BrowserRouter>
+    <App/>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

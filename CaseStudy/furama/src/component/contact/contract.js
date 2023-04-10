@@ -1,6 +1,7 @@
-const contractMap = [
+export const contractMap = [
     {
-        contractId: "C1022G1",
+        contractId : 1,
+        contractCode: "C1022G1",
         customerId: 1,
         facilityId: 1,
         startDate: "10/04/2023",
@@ -8,7 +9,8 @@ const contractMap = [
         advancePayment: "400",
         remainingPayment: "1000"
     },{
-        contractId: "C1022G2",
+        contractId : 2,
+        contractCode: "C1022G2",
         customerId: 1,
         facilityId: 2,
         startDate: "15/04/2023",
@@ -16,7 +18,8 @@ const contractMap = [
         advancePayment: "500",
         remainingPayment: "2000"
     },{
-        contractId: "C1022G3",
+        contractId : 3,
+        contractCode: "C1022G3",
         customerId: 2,
         facilityId: 1,
         startDate: "11/04/2023",
@@ -24,7 +27,8 @@ const contractMap = [
         advancePayment: "400",
         remainingPayment: "900"
     },{
-        contractId: "C1022G4",
+        contractId : 4,
+        contractCode: "C1022G4",
         customerId: 2,
         facilityId: 2,
         startDate: "13/04/2023",
@@ -33,4 +37,3 @@ const contractMap = [
         remainingPayment: "1000"
     },
 ]
-export default contractMap;

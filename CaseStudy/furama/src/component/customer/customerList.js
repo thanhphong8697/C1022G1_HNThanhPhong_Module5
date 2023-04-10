@@ -1,9 +1,58 @@
-import customerMap from "./customer"
-import customerType from "./customerType";
+import {customerMap} from "./customer"
+import {customerType} from "./customerType";
+import { NavLink } from "react-router-dom";
 export default function CustomerList() {
     return (
       <>
-        <div style={{marginTop: '75px'}}>
+      <div className="row b-0 p-0" style={{height: "50px", marginTop: '75px'}}>
+        <div className="col-4 px-0">
+          <NavLink to="/customer-create"
+            style={{
+              width: "50%",
+              height: "100%",
+              backgroundColor: "#f0715f",
+              textAlign: "center",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              // margin: "15px 0px" 
+            }}
+            type="button"
+            className="btn "
+            data-bs-toggle="modal"
+            data-bs-target="#modalCreate"
+          >
+            Create new Customer
+          </NavLink>
+        </div>
+        <div className="col-8 ">
+          <form
+            className="container d-flex p-0"
+            style={{ margin: 15 }}
+
+          >
+            <div className="col-10 p-0">
+            <input
+              type="text"
+              className="form-control "
+              name="search"
+              id="search"
+              placeholder="Search"
+              style={{ width:"400px",float: "right" }}
+            />
+            </div>
+            <div className="col-2 p-0">
+            <span>
+              <button className=" btn btn-secondary ml-1"  style={{height: "100%"}} type="submit">
+                Search
+              </button>
+            </span>
+            </div>
+          </form>
+        </div>
+      </div>
+        <div style={{marginTop: '31px'}}>
+        
         <table className="table table-striped">
         <thead>
           <tr>

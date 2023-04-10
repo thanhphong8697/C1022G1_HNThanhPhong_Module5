@@ -1,4 +1,4 @@
-const customerType = [{
+export const customerType = [{
     id: 1,
     type: "Diamond"
 },{
@@ -15,4 +15,3 @@ const customerType = [{
     type: "Member"
 },
 ]
-export default customerType;
