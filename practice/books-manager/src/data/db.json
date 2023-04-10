@@ -3,7 +3,8 @@
     {
       "id": 1,
       "title": "book number one",
-      "quantity": 10
+      "quantity": 10,
+      "category": ""
     },
     {
       "id": 2,
@@ -11,4 +12,6 @@
       "quantity": 100
     }
   ]
+
+  "ca]ư"
 }

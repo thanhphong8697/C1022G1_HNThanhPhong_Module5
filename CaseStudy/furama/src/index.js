@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
-import FacilityPage from './component/facility/facilityPage';
+// import FacilityPage from './component/facility/facilityPage';
 // import CustomerList from './component/customer/customerList';
 // import CreateCustomer from './component/customer/createCustomer';
+import CreateFacility from './component/facility/createFacility';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,7 +15,8 @@ root.render(
     {/* <App /> */}
     {/* <CreateCustomer/> */}
     {/* <CustomerList/> */}
-    {<FacilityPage/>}
+    {/* {<FacilityPage/>} */}
+    <CreateFacility/>
   </React.StrictMode>
 );
 
