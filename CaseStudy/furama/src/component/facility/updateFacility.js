@@ -33,8 +33,8 @@ export default function UpdateFacility() {
         break;
       case "3":
         villa.style.display = "none";
-        house.style.display = "block";
-        room.style.display = "none";
+        house.style.display = "none";
+        room.style.display = "block";
         break;
       default:
         throw new ErrorMessage("Không hợp lệ");
@@ -266,6 +266,33 @@ export default function UpdateFacility() {
                 </div>
               </div>
 
+              <div id="room" style={{display: "none"}}>
+              <div className="row mb-4 ">
+                  <div className="col-2 d-flex align-items-center">
+                    <label
+                      htmlFor="freeAminities"
+                      className="form-label fw-bolder"
+                    >
+                      Dịch vụ miễn phí đi kèm
+                    </label>
+                  </div>
+                  <div className="col-10">
+                    <Field
+                      type="text"
+                      id="freeAminities"
+                      className="form-control"
+                      placeholder="Enter name of customer"
+                      name="freeAminities"
+                    />
+                    <ErrorMessage
+                      name="freeAminities"
+                      component="span"
+                      className="form-err"
+                    />
+                  </div>
+                </div>
+              </div>
+
               <div id="villa" style={{ display: "none" }}>
                 <div className="row mb-4 ">
                   <div className="col-2 d-flex align-items-center">
@@ -425,32 +452,6 @@ export default function UpdateFacility() {
                 </div>
               </div>
 
-              <div id="room" style={{ display: "none" }}>
-                <div className="row mb-4 ">
-                  <div className="col-2 d-flex align-items-center">
-                    <label
-                      htmlFor="freeAminities"
-                      className="form-label fw-bolder"
-                    >
-                      Dịch vụ miễn phí đi kèm
-                    </label>
-                  </div>
-                  <div className="col-10">
-                    <Field
-                      type="text"
-                      id="freeAminities"
-                      className="form-control"
-                      placeholder="Enter name of customer"
-                      name="freeAminities"
-                    />
-                    <ErrorMessage
-                      name="freeAminities"
-                      component="span"
-                      className="form-err"
-                    />
-                  </div>
-                </div>
-              </div>
 
               <div className="d-flex justify-content-center">
                 {/* <a href="" className="btn btn-secondary me-3">

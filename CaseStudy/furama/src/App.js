@@ -12,6 +12,7 @@ import FacilityCreate from "./component/facility/createFacility"
 import CustomerCreate from "./component/customer/createCustomer"
 import ContractList from "./component/contact/contractList";
 import CreateContract from "./component/contact/createContract";
+import UpdateCustomer from "./component/customer/updateCustomer";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/facility-create" element={<FacilityCreate />} />
         <Route path="/customer-create" element={<CustomerCreate />} />
         <Route path="/contract-create" element={<CreateContract />} />
+        <Route path="/customer-update" element={<UpdateCustomer/>} />
       </Routes>
       <Footer />
       <ToastContainer />
