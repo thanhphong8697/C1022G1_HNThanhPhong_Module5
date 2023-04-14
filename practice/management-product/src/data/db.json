@@ -1,0 +1,58 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Iphone 13",
+      "productType": 1,
+      "price": "15000000"
+    },
+    {
+      "id": 2,
+      "name": "Macbook M1",
+      "productType": 2,
+      "price": "3000000"
+    },
+    {
+      "id": 3,
+      "name": "Apple wacth ss7",
+      "productType": 3,
+      "price": "10000000"
+    },
+    {
+      "id": 4,
+      "name": "abcdd.333",
+      "productType": 2,
+      "price": "12366669999"
+    },
+    {
+      "product": {
+        "name": "fsfa",
+        "productType": 1,
+        "price": "123"
+      },
+      "id": 5
+    },
+    {
+      "product": {
+        "name": "abc",
+        "productType": 1,
+        "price": "123"
+      },
+      "id": 6
+    }
+  ],
+  "productTypes": [
+    {
+      "id": 1,
+      "name": "Mobile"
+    },
+    {
+      "id": 2,
+      "name": "Laptop"
+    },
+    {
+      "id": 3,
+      "name": "Wacth"
+    }
+  ]
+}
